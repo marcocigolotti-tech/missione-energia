@@ -1,33 +1,46 @@
-# Missione Energia — gioco didattico inclusivo
+# MISSIONE ENERGIA – Accendi la città!
 
-Attività per scuola secondaria di primo grado, utilizzabile anche con alunni più piccoli e BES/DSA.
+Gioco didattico inclusivo per GitHub Pages dedicato alle fonti di energia.
 
-## Introduzione e crediti
+## Novità di questa versione
 
-La pagina contiene una breve storia introduttiva, una spiegazione visiva delle tappe dell’energia e i crediti completi del progetto: **Ideato e creato dal Prof. Marco Cigolotti**, con il supporto dell’intelligenza artificiale. Il pulsante **Inizia la missione** porta al gioco.
+- caratteri ad alta leggibilità (Atkinson Hyperlegible come font principale, con fallback leggibili);
+- schede visive dedicate alle principali fonti di energia;
+- livello **Esploratore** per un percorso più guidato;
+- livello **Esperto** con **missioni a bivi**, risposte a step, esclusione dal percorso in caso di errore e badge/ricompense;
+- compatibilità con smartphone, tablet e computer;
+- strumenti accessibili: testo più grande, alto contrasto, lettura vocale.
 
-## Come giocare
+## Struttura del gioco
 
-1. Scegli **Esploratore** (quattro fonti) o **Esperto** (otto fonti).
-2. Tocca un dischetto che rappresenta una centrale e poi il cerchio accanto alla fonte corrispondente.
-3. Controlla gli abbinamenti. Le caselle verdi sono corrette; le rosa vanno riprovate.
-4. Collega gli usi dell'elettricità e rispondi alle domande del quiz.
+### Livello Esploratore
+1. associazione fonte → centrale;
+2. associazione rete → utilizzo;
+3. verifica finale.
 
-Sono previsti: aiuti graduali, esempi guidati, caratteri leggibili, contrasto elevato, dimensioni testo maggiorate, lettura vocale opzionale (quando supportata dal browser), interazione via touch, tastiera e mouse, assenza di cronometro e punteggio non punitivo.
+### Livello Esperto
+1. associazione fonte → centrale;
+2. associazione rete → utilizzo;
+3. **Missioni energia** a bivi;
+4. verifica finale.
 
 ## Pubblicazione su GitHub Pages
 
-1. Crea un **nuovo repository pubblico** su GitHub, per esempio `missione-energia`.
-2. Carica nella **radice del repository** i tre file `index.html`, `style.css`, `game.js` (non solo lo ZIP).
-3. Apri **Settings → Pages → Build and deployment**, seleziona **Deploy from a branch**, **main**, **/(root)** e salva.
-4. Quando la pubblicazione è attiva, il sito sarà disponibile all'indirizzo `https://NOMEUTENTE.github.io/missione-energia/` (sostituisci NOMEUTENTE).
+1. caricare `index.html`, `style.css` e `game.js` nella root del repository;
+2. attivare GitHub Pages da `Settings > Pages`;
+3. scegliere il branch `main` e la cartella `/(root)`.
 
-## Note didattiche
+## Crediti
 
-- La biomassa è una fonte rinnovabile solo in particolari condizioni di gestione sostenibile; compare nel livello Esperto.
-- Petrolio, carbone e gas sono fonti fossili non rinnovabili. Le denominazioni delle centrali sono semplificate per uso scolastico.
-- L'accumulo nelle batterie è una possibilità, non una tappa obbligatoria dell'energia elettrica.
-- Non tutti i trasporti utilizzano energia elettrica e non tutta l'energia destinata ai trasporti passa dalla rete: perciò il gioco parla di **trasporti elettrici**.
-- Non sono utilizzate librerie esterne, cookie, tracker o moduli di inserimento dati personali. La sintesi vocale dipende dai servizi disponibili sul dispositivo.
+**Ideato e creato dal Prof. Marco Cigolotti**
 
-Ideato dal Prof. Marco Cigolotti con il supporto dell'intelligenza artificiale.
+Progettazione e sviluppo digitale con il supporto dell'intelligenza artificiale.
+
+## Vite nel livello Esperto
+
+- 5 vite iniziali, mostrate come cuori nella barra del punteggio.
+- Ogni errore nelle missioni a bivi costa una vita e riporta al primo step della missione.
+- Con zero vite appare una schermata **Game Over** con pulsante **Nuova partita**.
+- I badge rimangono acquisiti finché la partita non termina.
+- In **Accessibilità** è possibile attivare la modalità senza perdita di vite.
+- Il livello Esploratore non ha penalità.
