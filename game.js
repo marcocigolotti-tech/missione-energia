@@ -327,7 +327,7 @@ function renderGameOver(){
   $("pieces").innerHTML = ''; $("remaining").textContent = '0 vite';
   $("selectionStatus").textContent = 'La partita è terminata.';
   $("hintText").textContent = 'Riprova: le missioni sono occasioni per imparare.';
-  $("boardContent").innerHTML = `<div class="gameover" role="alert"><div class="gameoverIcon">💔</div><h2>GAME OVER</h2><p>Hai esaurito le ${MAX_LIVES} vite.</p><p>Hai conquistato <strong>${completedMissions.size} badge</strong>. Puoi ripartire o attivare la modalità senza perdita di vite nelle impostazioni di accessibilità.</p><button class="primary" id="restartAfterGameOver">🎮 Nuova partita</button></div>`;
+  $("boardContent").innerHTML = `<div class="gameover" role="alert"><div class="gameoverIcon">💔</div><h2>GAME OVER</h2><p class="gameEndCredit">Gioco ideato e creato dal Prof. Marco Cigolotti</p><p>Hai esaurito le ${MAX_LIVES} vite.</p><p>Hai conquistato <strong>${completedMissions.size} badge</strong>. Puoi ripartire o attivare la modalità senza perdita di vite nelle impostazioni di accessibilità.</p><button class="primary" id="restartAfterGameOver">🎮 Nuova partita</button></div>`;
   $("restartAfterGameOver").addEventListener('click', () => resetGame(hard));
   $("miniTip").textContent = '💡 Ogni errore aiuta a migliorare la strategia.';
 }
@@ -375,7 +375,7 @@ function renderQuiz(){
   $("nextBtn").hidden = true;
   if(completed || quizIndex >= quiz.length){
     completed = true; updateDashboard();
-    $("boardContent").innerHTML = `<div class="questionBox"><h2>🎉 Missione completata!</h2><p>Risposte corrette: <strong>${quizCorrect} su ${quiz.length}</strong>.</p><p>${completedMissions.size ? 'Badge conquistati: ' + Array.from(completedMissions).join(' · ') : 'Hai completato il percorso base.'}</p><div class="badgesRow">${Array.from(completedMissions).map(b=>`<span class="badge">🏅 ${b}</span>`).join('')}</div><div class="quizNav"><button class="primary" id="again">↺ Gioca di nuovo</button></div></div>`;
+    $("boardContent").innerHTML = `<div class="questionBox"><h2>🎉 Missione completata!</h2><p class="gameEndCredit">Ideato e creato dal Prof. Marco Cigolotti</p><p>Risposte corrette: <strong>${quizCorrect} su ${quiz.length}</strong>.</p><p>${completedMissions.size ? 'Badge conquistati: ' + Array.from(completedMissions).join(' · ') : 'Hai completato il percorso base.'}</p><div class="badgesRow">${Array.from(completedMissions).map(b=>`<span class="badge">🏅 ${b}</span>`).join('')}</div><div class="quizNav"><button class="primary" id="again">↺ Gioca di nuovo</button></div></div>`;
     $("again").addEventListener('click', ()=> resetGame(hard));
     return;
   }

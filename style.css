@@ -47,3 +47,10 @@ body.bigText{font-size:1.08rem}body.highContrast{--bg:#fff;--paper:#fff;--ink:#0
 @media (max-width:520px){.container{padding:18px 12px 35px}.hero,.story,.gallery,.learning,.board,.palette,.help{padding:16px}.galleryGrid{grid-template-columns:1fr}.piece,.slot,.sourceBox,.useCard{min-height:auto}.top{padding:12px 14px}.brand strong{font-size:.95rem}}
 
 #livesLabel{font-size:1.2rem;letter-spacing:1px;white-space:nowrap}.gameover{background:linear-gradient(145deg,#1e2a46,#3a233b);color:white;text-align:center;border-radius:20px;padding:38px 20px;min-height:350px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}.gameover h2{font-size:2rem}.gameover p{max-width:530px;margin:0}.gameoverIcon{font-size:4rem}.gameover .primary{background:#ffce48;border-color:#ffce48;color:#19304a;margin-top:12px}
+
+/* Crediti sempre riconoscibili e leggibili anche su tablet e smartphone */
+.brandAuthor{display:block;font-size:.85rem;font-weight:700;color:#fff0ac;margin-top:3px;letter-spacing:.01em}
+.gameAuthorStrip{margin:0 0 14px;padding:13px 17px;border:2px solid #e8cc78;background:#fff8e0;color:#27384b;border-radius:15px;font-size:1rem;line-height:1.55;text-align:center}
+.gameAuthorStrip strong{font-weight:800}
+.gameEndCredit{font-size:1rem;font-weight:700;color:#254e70;margin:14px 0;padding:11px;border:1px solid #e3d293;background:#fff9e5;border-radius:12px}
+@media(max-width:520px){.brandAuthor{font-size:.75rem}.gameAuthorStrip{font-size:.9rem;padding:11px}.top{align-items:flex-start}}
